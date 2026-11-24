@@ -1,0 +1,201 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #222;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+input {
+  padding: 11px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Authentication */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  background: white;
+  width: 380px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-card h2,
+.auth-card h3 {
+  text-align: center;
+}
+
+/* Dashboard layout */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: #172554;
+  color: white;
+  padding: 25px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sidebar-user {
+  color: #cbd5e1;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px;
+  color: white;
+  border-radius: 5px;
+}
+
+.sidebar nav a.active {
+  background: #2563eb;
+}
+
+.logout-btn {
+  margin-top: auto;
+  background: #dc2626;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  min-width: 0;
+}
+
+.main-content h1 {
+  margin-bottom: 10px;
+}
+
+.panel {
+  background: white;
+  padding: 22px;
+  margin-top: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #e5e7eb;
+}
+
+.panel h2 {
+  margin-bottom: 18px;
+}
+
+.student-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.student-form button {
+  width: fit-content;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-form input {
+  max-width: 350px;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+th, td {
+  padding: 13px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background: #f1f5f9;
+}
+
+td button {
+  margin: 3px;
+}
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.error {
+  color: #dc2626;
+  margin: 10px 0;
+}
+
+.success {
+  color: green;
+  margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .student-form {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .search-form {
+    flex-wrap: wrap;
+  }
+}
